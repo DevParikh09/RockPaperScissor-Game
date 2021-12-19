@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screenBackground1"
+    tools:context=".SecondFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout_top"
+        android:layout_width="408dp"
+        android:layout_height="43dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/computer"
+            android:layout_width="164dp"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif-medium"
+            android:text="Computer :"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/compScore"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/blank1"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif-medium"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/player"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif-medium"
+            android:text="You :"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/playerScore"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_middle1"
+        android:layout_width="205dp"
+        android:layout_height="648dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/divider4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_top"
+        tools:ignore="DuplicateIds">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/compStatus"
+                android:layout_width="158dp"
+                android:layout_height="43dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="Ready"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/compChoiceImg"
+                android:layout_width="118dp"
+                android:layout_height="120dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="44dp"
+                android:layout_marginBottom="268dp"
+                android:src="@drawable/ic_launcher_foreground" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_middle2"
+        android:layout_width="200dp"
+        android:layout_height="643dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_top"
+        app:layout_constraintVertical_bias="0.818"
+        tools:ignore="DuplicateIds">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/chooseLabel"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_above="@+id/rockBtn"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="27dp"
+                android:text="What's your Play?"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/rockBtn"
+                android:layout_width="137dp"
+                android:layout_height="133dp"
+                android:layout_above="@+id/paperBtn"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="31dp"
+                android:layout_marginBottom="31dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/round_btn"
+                android:scaleType="fitCenter"
+                android:src="@drawable/rock_modified"
+                android:textAlignment="center" />
+
+            <ImageButton
+                android:id="@+id/paperBtn"
+                android:layout_width="131dp"
+                android:layout_height="123dp"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/round_btn"
+                android:scaleType="fitCenter"
+                android:src="@drawable/paper_modified"
+                android:textAlignment="center" />
+
+            <ImageButton
+                android:id="@+id/scissorBtn"
+                android:layout_width="135dp"
+                android:layout_height="132dp"
+                android:layout_below="@+id/paperBtn"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="39dp"
+                android:layout_marginEnd="30dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/round_btn"
+                android:scaleType="fitCenter"
+                android:src="@drawable/scissor_modified"
+                android:textAlignment="center" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/blank"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:fontFamily="sans-serif-medium"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/restartGame"
+            android:layout_width="13dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="Restart" />
+
+        <TextView
+            android:id="@+id/blank2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:fontFamily="sans-serif-medium"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/exitGame"
+            android:layout_width="13dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="Exit" />
+
+        <TextView
+            android:id="@+id/blank3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:fontFamily="sans-serif-medium"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="3dp"
+        android:layout_height="match_parent"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TableLayout
+        android:layout_width="410dp"
+        android:layout_height="515dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center">
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
